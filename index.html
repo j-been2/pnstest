@@ -1,32 +1,25 @@
-<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages 예제</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            margin: 50px;
-        }
-        .btn {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
+    <title>대구/경북광역본부 P&S</title>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <h1>GitHub Pages 예제</h1>
-    <a class="btn" href="page1.html">페이지 1</a>
-    <a class="btn" href="page2.html">페이지 2</a>
-    <a class="btn" href="page3.html">페이지 3</a>
+    <div class="container">
+        <h1>대구/경북광역본부 P&S</h1>
+        
+        <input type="text" id="userInput" placeholder="사용자 계정(사번)을 입력하세요." />
+        <button id="checkAccessBtn">확인</button>
+        
+        <div id="buttonContainer" class="button-container">
+            <button class="action-button" onclick="navigateTo('product')">상품소개</button>
+            <button class="action-button" onclick="navigateTo('apply')">신청하기</button>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
 </body>
 </html>

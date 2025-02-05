@@ -1,0 +1,66 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* 사용자 입력 및 버튼 */
+input {
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1rem;
+    margin: 10px 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* 버튼 hover 효과 */
+button:hover {
+    background-color: #45a049;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input,
+    button {
+        width: 80%;
+    }
+}

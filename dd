@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<!-- 이전 head 부분 동일 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대구경북 원샷브릿지 2.0</title>
+    <style>
+        /* 이전 스타일 동일하게 유지 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 이전 스타일들... */
+
+        /* info-panel 스타일 수정 */
+        .info-panel {
+            position: fixed;
+            top: 0;
+            right: -100%; /* 변경: -400px에서 -100%로 */
+            width: 400px;
+            height: 100%;
+            background-color: white;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s ease; /* 변경: right에서 transform으로 */
+            overflow-y: auto;
+            z-index: 1000; /* 추가: 다른 요소들 위에 표시 */
+        }
+
+        .info-panel.active {
+            transform: translateX(-100%); /* 변경: right: 0에서 transform으로 */
+        }
+
+        /* 나머지 스타일 동일... */
+
+        @media (max-width: 768px) {
+            .info-panel {
+                width: 80%; /* 변경: 모바일에서 전체 너비 대신 80% */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 이전 HTML 구조 동일 -->
+    <div class="container">
+        <!-- 이전 내용 동일 -->
+    </div>
+
+    <div class="info-panel">
+        <button class="info-panel-close">×</button>
+        <div class="info-images">
+            <div class="info-image"></div>
+            <div class="info-image"></div>
+            <div class="info-image"></div>
+        </div>
+        <p class="info-text">서비스 정보 라인 1</p>
+        <p class="info-text">서비스 정보 라인 2</p>
+        <p class="info-text">서비스 정보 라인 3</p>
+        <p class="info-text">서비스 정보 라인 4</p>
+        <p class="info-text">서비스 정보 라인 5</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const serviceBtns = document.querySelectorAll('.service-btn');
+            const infoPanel = document.querySelector('.info-panel');
+            const closePanelBtn = document.querySelector('.info-panel-close');
+
+            // 버튼 클릭 시 패널 표시
+            serviceBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation(); // 이벤트 버블링 방지
+                    infoPanel.classList.add('active');
+                });
+            });
+
+            // 닫기 버튼 클릭 시 패널 닫기
+            closePanelBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // 이벤트 버블링 방지
+                infoPanel.classList.remove('active');
+            });
+
+            // 패널 외부 클릭 시 닫기
+            document.addEventListener('click', (e) => {
+                if (!infoPanel.contains(e.target) && 
+                    !Array.from(serviceBtns).includes(e.target)) {
+                    infoPanel.classList.remove('active');
+                }
+            });
+
+            // 패널 내부 클릭 시 이벤트 전파 방지
+            infoPanel.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

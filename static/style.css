@@ -120,7 +120,7 @@ nav button {
 .u_itembox {
     height: 100%;
     width: 100%;
-    padding: 10px 0px;
+    padding: 8px 0px;
     box-sizing: border-box;
     color: #000;
     text-align: center;
@@ -242,7 +242,7 @@ nav button {
     text-align: left;
     border-radius: 5px;
 
-    padding: 0.8vw;
+    padding: 0.8vw 1.5vw;
     font-size: 1.2vw;
 
 }
@@ -272,6 +272,7 @@ nav button {
     text-align: center;
     padding: 10px;
     background-color: antiquewhite;
+    margin-bottom: 4px;
 
 }
 

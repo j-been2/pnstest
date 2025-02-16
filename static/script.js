@@ -95,11 +95,21 @@ function openPopup(title) {
             break;
         case '갤럭시ZFold6':
             realprice = 2229700;
-            policy = 500000;
+            policy = 440000;
             break;
         case '갤럭시ZFlip6':
             realprice = 1485000;
-            policy = 500000
+            policy = 490000;
+            break;
+        
+        case '갤럭시점프3':
+            realprice = 438900;
+            policy = 310000;
+            break;
+        
+        case '포차코':
+            realprice = 349800;
+            policy = 170000;
             break;
         
         default:

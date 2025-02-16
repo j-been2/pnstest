@@ -289,7 +289,7 @@ nav button {
     padding: 10px;
     display: inline-block;
     white-space: nowrap;
-    font-size:clamp(20px, 2vw, 30px);
+    font-size:clamp(25px, 2vw, 35px);
 }
 
 .overlay {

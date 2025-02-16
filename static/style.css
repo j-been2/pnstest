@@ -119,8 +119,8 @@ nav button {
 
 .u_itembox {
     height: 100%;
-    width: 100%;
-    padding: 8px 0px;
+    width: 50%;
+    padding: 8px;
     box-sizing: border-box;
     color: #000;
     text-align: center;
@@ -329,8 +329,9 @@ nav button {
     width: 25%;
     max-width: 120px;
     height: auto;
-    object-fit: cover;
-    padding: 10px;
+    object-fit: contain;;
+    padding: 5px;
+    min-width: 85px;
 }
 
 .so_price {
@@ -355,6 +356,12 @@ nav button {
         box-sizing: border-box;
         padding-bottom: 25px;
     }
+
+    .u_itembox {
+        width: 100%;
+        padding: 8px 0px;
+    }
+
 
     .price-box {
         font-size: 2.5vw;
@@ -384,6 +391,12 @@ nav button {
         padding-bottom: 20px;
     }
 
+    .u_itembox {
+        width: 100%;
+        padding: 8px 0px;
+    }
+        
+
     .popup {
         width: 80%;
     }
@@ -401,7 +414,11 @@ nav button {
         font-size: 3.3vw;
     }
     .model-name {
-        font-size: 3.4vw;
+        font-size: 4vw;
+    }
+
+    .ptab-content{
+        padding: 1px;
     }
 
 }

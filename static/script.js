@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < priceElements1.length; i++) {
         priceElements1[i].textContent = formatPrice_f2(priceElements1[i].textContent);
     }
+
+    if (window.innerWidth <= 768) {
+        const label = document.getElementById("benefit-text");
+        label.innerHTML = "※ 고객 혜택은 유형/요금제 등에 따라 상이할 수 있음<br>세부사항 상담 요청";
+    }
+    
 });
 
 
@@ -156,6 +162,73 @@ function closePopup() {
     document.getElementById('popup').classList.add('hidden');
     document.getElementById("overlay").classList.remove("active"); // 오버레이 숨기기
 }
+
+
+// Function to add a new item
+function addItem() {
+    const modelName = document.getElementById('modelName').value;
+    const imageSrc = document.getElementById('imageSrc').value;
+    const price = document.getElementById('price').value;
+    const supportPrice = document.getElementById('supportPrice').value;
+
+    // Creating a new itembox
+    const newItem = document.createElement('div');
+    newItem.classList.add('itembox');
+    newItem.innerHTML = `
+        <img class="fit-picture" src="${imageSrc}" alt="${modelName}" />
+        <div class="model-name">${modelName}</div>
+        <div class="price-box">
+            <div><span class="label">출고가:</span> <span class="price bold f1">${price}</span>원</div>
+            <div><span class="label">원샷지원금:</span> <span class="price bold blue f1">${supportPrice}</span>원</div>
+        </div>
+    `;
+    newItem.setAttribute('onclick', `openPopup('${modelName}')`);
+
+    // Append to the category (for example, first category)
+    document.querySelector('.category').appendChild(newItem);
+
+    // Clear the form
+    document.getElementById('itemForm').reset();
+}
+
+// Function to delete an item
+function deleteItem() {
+    const modelName = document.getElementById('modelName').value;
+    const item = document.querySelector(`.itembox .model-name:contains('${modelName}')`);
+
+    if (item) {
+        item.parentElement.remove();
+    } else {
+        alert("아이템을 찾을 수 없습니다.");
+    }
+
+    // Clear the form
+    document.getElementById('itemForm').reset();
+}
+
+// Function to modify an item
+function modifyItem() {
+    const modelName = document.getElementById('modelName').value;
+    const imageSrc = document.getElementById('imageSrc').value;
+    const price = document.getElementById('price').value;
+    const supportPrice = document.getElementById('supportPrice').value;
+
+    const item = document.querySelector(`.itembox .model-name:contains('${modelName}')`);
+    if (item) {
+        const itemBox = item.parentElement;
+        itemBox.querySelector('.fit-picture').src = imageSrc;
+        itemBox.querySelector('.model-name').innerText = modelName;
+        itemBox.querySelector('.price-box .price.bold.f1').innerText = price;
+        itemBox.querySelector('.price-box .price.bold.blue.f1').innerText = supportPrice;
+    } else {
+        alert("아이템을 찾을 수 없습니다.");
+    }
+
+    // Clear the form
+    document.getElementById('itemForm').reset();
+}
+
+
 
 // function checkAccess() {
 //     let userInput = document.getElementById("userInput").value;

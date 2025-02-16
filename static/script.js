@@ -1,3 +1,28 @@
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    function formatNumber(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+
+    let priceElements = document.getElementsByClassName("f1");
+
+    for (let i = 0; i < priceElements.length; i++) {
+        priceElements[i].textContent = formatNumber(priceElements[i].textContent);
+    }
+
+    // 10만원
+    let priceElements1 = document.getElementsByClassName("f2");
+    for (let i = 0; i < priceElements1.length; i++) {
+        priceElements1[i].textContent = formatPrice_f2(priceElements1[i].textContent);
+    }
+});
+
+
+
 function showTab(tabNumber) {
     // 모든 탭 내용 숨기기
     const tabs = document.querySelectorAll('.ptab-content');
@@ -29,6 +54,8 @@ function showSection(tabName) {
 
     document.getElementById(tabName).classList.remove('hidden');
     document.getElementById(tabName + 'Tab').classList.add('active');
+
+    showTab(1);
 }
 
 function openPopup(title) {
@@ -83,7 +110,7 @@ function openPopup(title) {
     price = realprice - policy;
     realprice = realprice.toLocaleString();
     price = price.toLocaleString();
-    policy = formatPrice(policy);
+    policy = formatPrice_f2(policy);
     
 
     // 팝업에 내용 채우기
@@ -97,13 +124,18 @@ function openPopup(title) {
     
 }
 
-function formatPrice(price) {
+function formatPrice_f2(price) {
 
     // If the price is 100,000 or more, format it as "10만", "100만", etc.
     if (price >= 100000) {
         let formattedPrice = (price / 10000).toFixed(0) + '만'; // Dividing by 10,000 and appending "만"
         return formattedPrice;
-    } else {
+    }
+    else if (price >= 10000){
+        let formattedPrice = (price / 10000).toFixed(0) + '만'; // Dividing by 10,000 and appending "만"
+        return formattedPrice;
+    }
+    else {
         // Otherwise, format with commas
         return price.toLocaleString(); // Adds commas as thousand separators
     }
@@ -115,25 +147,25 @@ function closePopup() {
     document.getElementById("overlay").classList.remove("active"); // 오버레이 숨기기
 }
 
-function checkAccess() {
-    let userInput = document.getElementById("userInput").value;
-    let navSection = document.getElementById("navSection");
-    let passwordContainer = document.getElementById("passwordContainer");
-    const correctPassword = "123456"; // 올바른 비밀번호 설정
+// function checkAccess() {
+//     let userInput = document.getElementById("userInput").value;
+//     let navSection = document.getElementById("navSection");
+//     let passwordContainer = document.getElementById("passwordContainer");
+//     const correctPassword = "123456"; // 올바른 비밀번호 설정
 
-    if (userInput.trim() === correctPassword) {
-        // 비밀번호가 맞으면 입력창을 숨기고 다음 화면 보이기
-        passwordContainer.style.display = "none";
-        navSection.style.display = "block";
-    } else {
-        // 틀리면 경고창 띄우기
-        alert("비밀번호가 틀렸습니다. 다시 입력하세요.");
-    }
-}
+//     if (userInput.trim() === correctPassword) {
+//         // 비밀번호가 맞으면 입력창을 숨기고 다음 화면 보이기
+//         passwordContainer.style.display = "none";
+//         navSection.style.display = "block";
+//     } else {
+//         // 틀리면 경고창 띄우기
+//         alert("비밀번호가 틀렸습니다. 다시 입력하세요.");
+//     }
+// }
 
 
-document.getElementById("userInput").addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        document.getElementById("checkAccessBtn").click();
-    }
-});
+// document.getElementById("userInput").addEventListener("keypress", function (event) {
+//     if (event.key === "Enter") {
+//         document.getElementById("checkAccessBtn").click();
+//     }
+// });

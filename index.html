@@ -8,14 +8,14 @@
 </head>
 <body>
     <header>
-        <h1><span class="highlight">대구/경북</span> 원샷브릿지 <span class="highlight">2.0</span></h1>
-        
+        <div class="title"><span class="highlight">대구/경북</span> 원샷브릿지 <span class="highlight">2.0</span></div>
+<!--         
         <div id="passwordContainer">
         <input type="text" id="userInput" placeholder="비밀번호를 입력하세요." />
         <button id="checkAccessBtn" onclick="checkAccess()">확인</button>
-        </div>
+        </div> -->
         
-        <nav id="navSection" style="display: none;">
+        <nav id="navSection">
             <button id="productTab" onclick="showSection('product')">상품소개</button>
             <button id="inquiryTab" onclick="showSection('inquiry')">문의/접수처</button>
         </nav>
@@ -25,26 +25,45 @@
 
         <section id="product" class="tab-content hidden">
         <div class="tab-buttons">
-            <div class="tab-button" onclick="showTab(1)">모바일</div>
-            <div class="tab-button" onclick="showTab(2)">인터넷</div>
-            <div class="tab-button" onclick="showTab(3)">TV</div>
-            <div class="tab-button" onclick="showTab(4)">소상공인</div>
+            <div class="tab-button" onclick="showTab(1)">모바일 상품</div>
+            <div class="tab-button" onclick="showTab(2)">유무선 결합</div>
+            <div class="tab-button" onclick="showTab(3)">소상공인</div>
         </div>
 
         <div id="tab1" class="ptab-content">
+            <div class="bigo">
+            <span class="label font-resize">* 요금할인(11만원 요금제)/KT 고객 기기변경 기준</span>
+            <span class="label font-resize">* 갤럭시 점프3, 포차코 키즈폰은 별도 요금제</span>
+            <span class="label font-resize">• 고객 혜택은 유형/요금제 등에 따라 상이할 수 있음</span>
+            <span class="label font-resize">(부가서비스 등 세부사항 상담시 안내)</span>
+            </div>
+
             <div class="category">
                 <div class="itembox" onclick="openPopup('S25울트라')">
                     <img class="fit-picture" src="img/s24울트라.png" alt="s24" />
                     <div class="model-name">S25울트라</div>
+                     <div class="price-box">
+                        <div><span class="label">출고가:</span> <span class="price bold f1">1698400</span>원</div>
+                        <div><span class="label">원샷지원금:</span> <span class="price bold blue f1">500000</span>원</div>
+                    </div>
                 </div>
                 <div class="itembox" onclick="openPopup('S25플러스')">
                     <img class="fit-picture" src="img/s24플러스.png" alt="s24" />
                     <div class="model-name">S25플러스</div>
+                    <div class="price-box">
+                        <div><span class="label">출고가:</span> <span class="price bold f1">1353000</span>원</div>
+                        <div><span class="label">원샷지원금:</span> <span class="price bold blue f1">500000</span>원</div>
+                    </div>
                 </div>
                 <div class="itembox" onclick="openPopup('S25')">
                     <img class="fit-picture" src="img/s24.png" alt="s24" />
                     <div class="model-name">S25</div>
+                    <div class="price-box">
+                        <div><span class="label">출고가:</span> <span class="price bold f1">1155000</span>원</div>
+                        <div><span class="label">원샷지원금:</span> <span class="price bold blue f1">500000</span>원</div>
+                    </div>
                 </div>
+                
             </div>
 
             <div class="category">
@@ -80,40 +99,173 @@
 
         </div>
 
+        <!-- 유무선결합 -->
         <div id="tab2" class="ptab-content">
-            <div class="category">
+            <div class="bigo">
+            <span class="label font-resize">* 기본 3년 약정기준, 모바일 요금 별도</span>
+            <span class="label font-resize">* 고객 혜택은 유형/요금제 등에 따라 상이할 수 있음/세부사항 상담 요청</span>
+            </div>
 
-                <div class="circle" onclick="openPopup('2.5G')">2.5G</div>
-                <div class="circle" onclick="openPopup('1G')">1G</div>
-                <div class="circle" onclick="openPopup('500M')">500M</div>
+            <div class="category">
+                <div class="u_itembox">
+                    <div class="model-name">모바일+인터넷+TV</div>
+                     <div class="price-box">
+                        <div><span class="label">• 유선요금:</span> <span class="price bold f1">63250</span>원 (월)</div>
+                        <div><span class="label">• 상품권:</span> <span class="price bold f2">100000</span>원</div>
+                        <div><span class="label">• 고객지원금:</span> <span class="price bold blue f2">700000</span>원</div>
+                        <div><span class="label">• 요금제기준:</span> <span class="price bold">인터넷 에센스팩S + 지니TV 초이스 스페셜</span></div>
+                    </div>
+                </div>
+
+                <div class="u_itembox">
+                    <div class="model-name">인터넷+TV</div>
+                     <div class="price-box">
+                        <div><span class="label">• 유선요금:</span> <span class="price bold f1">63250</span>원 (월)</div>
+                        <div><span class="label">• 상품권:</span> <span class="price bold f2">100000</span>원</div>
+                        <div><span class="label">• 고객지원금:</span> <span class="price bold blue f2">500000</span>원</div>
+                        <div><span class="label">• 요금제기준:</span> <span class="price bold">인터넷 에센스팩S + 지니TV 초이스 스페셜</span></div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
+        <!-- 소상공인 -->
         <div id="tab3" class="ptab-content">
             <div class="category">
-                <h2>TV</h2>
-                <div class="circle" onclick="openPopup('프리미엄')">프리미엄</div>
-                <div class="circle" onclick="openPopup('스페셜')">스페셜</div>
-                <div class="circle" onclick="openPopup('플러스')">플러스</div>
+                <div class="u_itembox">
+                    <div class="model-name">하이오더</div>
+                    <div class="so_itembox">
+                        <img class="so_fit-picture" src="img/하이오더.png" alt="하이오더" />
+                        <div class="so_price price-box">
+                            <div><span class="label">• 요금:</span> <span class="price bold f1">244200</span>원 (월)</div>
+                            <div><span class="label">• P&S 고객 지원금:</span> <span class="price bold f2">500000</span>원</div>
+                            <div><span class="label">• 요금제기준:</span> <span class="price bold">후불형 기준/ 5대</span></div>
+                            <div><span class="label">* 테이블 당 10만원 지원</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="u_itembox">
+                    <div class="model-name">AI로봇</div>
+                    <div class="so_itembox">
+                        <img class="so_fit-picture" src="img/로봇.jpg" alt="로봇" />
+                        <div class="so_price price-box">
+                            <div><span class="label">• 요금:</span> <span class="price bold f1">660000</span>원 (월)</div>
+                            <div><span class="label">• P&S 고객 지원금:</span> <span class="price bold f2">2000000</span>원</div>
+                            <div><span class="label">• 요금제기준:</span> <span class="price bold">서빙 2세대 (L2 임대형)</span></div>
+                         
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="u_itembox">
+                    <div class="model-name">AI전화</div>
+                    <div class="so_itembox">
+                        <img class="so_fit-picture" src="img/AI전화.png" alt="AI전화" />
+                        <div class="so_price price-box">
+                            <div><span class="label">• 요금:</span> <span class="price bold f1">9900</span>원 (월)</div>
+                            <div><span class="label">• P&S 고객 지원금:</span> <span class="price bold f2">30000</span>원</div>
+                            <div><span class="label">• 요금제기준:</span> <span class="price bold">AI 전화 라이트</span></div>
+                         
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
-        <div id="tab4" class="ptab-content">
-            <div class="category">
-                <h2>소상공인</h2>
-                <div class="circle" onclick="openPopup('하이오더')">하이오더</div>
-                <div class="circle" onclick="openPopup('서빙로봇')">서빙로봇</div>
-                <div class="circle" onclick="openPopup('AI링고전화')">AI링고</div>
-            </div>
-        </div>
         </section>
-        
+
+
+        <!-- 문의/접수처 -->
         <section id="inquiry" class="tab-content hidden">
-            <h2>문의/접수처</h2>
-            <p>문의사항은 아래 연락처로 부탁드립니다.</p>
+
+            <div id="tab1" class="ptab-content" style="display:block;">
+
+                <div class="bigo">
+                <span class="label font-resize">※ 접수 QR코드 스캔 또는 링크 클릭 시 P&S 전용 상담톡으로 이동</span>
+                <span class="label font-resize">※ 대리점에서 상담 후 네이버폼 접수 링크를 고객님께 전달 (임직원 정보 입력 必)</span>
+                </div>
+
+
+                <div class="bigo2">
+                <span class="label font-resize">일반고객</span>
+                </div>
+
+                <div class="category">
+                    <div class="itembox">
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
+                        <div class="model-name">서대구 / 아스텔</div>
+                        <div class="price-box">
+                            <div><span class="label">윤영준 과장 (010-7300-7076)</span></div>
+                            <div><span class="label">서준영 과장 (010-9888-8893)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="itembox">
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
+                        <div class="model-name">동대구 / 인하우스</div>
+                        <div class="price-box">
+                            <div><span class="label">성영욱 과장 (010-9777-7792)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="itembox">
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
+                        <div class="model-name">경북동부 / 한길</div>
+                        <div class="price-box">
+                            <div><span class="label">김선희 차장 (010-9777-7743)</span></div>
+                        </div>
+                    </div>
+
+                     <div class="itembox">
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
+                        <div class="model-name">경북서부 / KTCS</div>
+                        <div class="price-box">
+                            <div><span class="label">정기웅 차장 (010-9777-7842)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="itembox">
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
+                        <div class="model-name">경북북부 / 대동기업</div>
+                        <div class="price-box">
+                            <div><span class="label">류지환 차장 (010-9888-3187)</span></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="bigo2">
+                <span class="label font-resize">소상공인</span>
+                </div>
+
+                <div class="category">
+                    <div class="itembox">
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
+                        <div class="model-name">전 권역 / 플라자</div>
+                        <div class="price-box">
+                            <div><span class="label">윤대열 그룹장 (010-7727-1818)</span></div>
+                            <div><span class="label">로봇/하이오더/AI전화</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
         </section>
     </main>
 
+    <!-- 모바일 클릭  -->
     <div id="popup" class="popup hidden">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>

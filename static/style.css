@@ -135,7 +135,7 @@ nav button {
     height: 100%;
     aspect-ratio: 1 / 1;
     /* Maintain a fixed aspect ratio (1:1) */
-    object-fit: cover;
+    object-fit: contain;
     /* Ensure image fits within the box */
 }
 

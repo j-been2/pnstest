@@ -24,7 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const label = document.getElementById("benefit-text");
         label.innerHTML = "※ 고객 혜택은 유형/요금제 등에 따라 상이할 수 있음<br>세부사항 상담 요청";
     }
-    
+
+
+    showSection('product');
 });
 
 

@@ -1,51 +1,26 @@
-{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>대구/경북 원샷브릿지 2.0</title>
-
-    <!-- Custom fonts for this template-->
-   
-    <link rel="stylesheet" href="/static/pns_style.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/pns.ico" />
-
-    <!-- Custom styles for this template-->
-    {% comment %} <link href="/static/css/sb-admin-2.min.css" rel="stylesheet"> {% endcomment %}
-    {% comment %} <link href="/static/css/custom.css" rel="stylesheet"> {% endcomment %}
-    <link href="/static/pns_style.css" rel="stylesheet">
-    
-    <style>
-        #captcha-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 70%;
-        }
-    </style>
-
+    <link rel="stylesheet" href="static/style.css">
 </head>
-
-<body class="" style="background-color:#FFF">
+<body>
     <header>
         <div class="title"><span class="highlight">대구/경북</span> 원샷브릿지 <span class="highlight">2.0</span></div>
-
+<!--         
+        <div id="passwordContainer">
+        <input type="text" id="userInput" placeholder="비밀번호를 입력하세요." />
+        <button id="checkAccessBtn" onclick="checkAccess()">확인</button>
+        </div> -->
         
         <nav id="navSection">
             <button id="productTab" onclick="showSection('product')">상품소개</button>
             <button id="inquiryTab" onclick="showSection('inquiry')">문의/접수처</button>
         </nav>
     </header>
-
-
+    
     <main class="container">
 
         <section id="product" class="tab-content hidden">
@@ -65,26 +40,15 @@
 
             <div class="category">
                 <div class="itembox" >
-                    <img class="fit-picture" src="/static/img/유심캡처.jpg" alt="" />
-                    <div class="model-name">유심 가입 (타사고객)</div>
-                    <div class="price-box">
-                        <div><span class="label">출고가:</span> <span class="price bold f1">없음</span>(기존 단말기 유지)</div>
-                        <div><span class="label">원샷 지원금:</span> <span class="price bold blue f1">200000</span>원</div>
-                    </div>
-                </div>
-
-
-                <div class="itembox" >
-                    <img class="fit-picture" src="/static/img/s24울트라.png" alt="s24" />
+                    <img class="fit-picture" src="img/s24울트라.png" alt="s24" />
                     <div class="model-name">S25울트라</div>
-                    <div class="price-box">
+                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1698400</span>원</div>
                         <div><span class="label">원샷 지원금:</span> <span class="price bold blue f1">300000</span>원</div>
                     </div>
                 </div>
-
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/s24플러스.png" alt="s24" />
+                    <img class="fit-picture" src="img/s24플러스.png" alt="s24" />
                     <div class="model-name">S25플러스</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1353000</span>원</div>
@@ -92,7 +56,7 @@
                     </div>
                 </div>
                 <div class="itembox" >
-                    <img class="fit-picture" src="/static/img/s24.png" alt="s24" />
+                    <img class="fit-picture" src="img/s24.png" alt="s24" />
                     <div class="model-name">S25</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1155000</span>원</div>
@@ -104,7 +68,7 @@
 
             <div class="category">
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/아이폰16프로맥스.png" alt="s24" />
+                    <img class="fit-picture" src="img/아이폰16프로맥스.png" alt="s24" />
                     <div class="model-name">아이폰16프로맥스</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1892000</span>원</div>
@@ -113,7 +77,7 @@
                 </div>
 
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/아이폰16프로.png" alt="s24" />
+                    <img class="fit-picture" src="img/아이폰16프로.png" alt="s24" />
                     <div class="model-name">아이폰16프로</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1540000</span>원</div>
@@ -122,7 +86,7 @@
                 </div>
 
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/아이폰16플러스.png" alt="s24" />
+                    <img class="fit-picture" src="img/아이폰16플러스.png" alt="s24" />
                     <div class="model-name">아이폰16플러스</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1342000</span>원</div>
@@ -131,7 +95,7 @@
                 </div>
 
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/아이폰16.png" alt="s24" />
+                    <img class="fit-picture" src="img/아이폰16.png" alt="s24" />
                     <div class="model-name">아이폰16</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1243000</span>원</div>
@@ -143,7 +107,7 @@
 
             <div class="category">
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/갤럭시ZFold6.png" alt="s24" />
+                    <img class="fit-picture" src="img/갤럭시ZFold6.png" alt="s24" />
                     <div class="model-name">Z Fold 6</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">2229700</span>원</div>
@@ -152,7 +116,7 @@
                 </div>
 
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/갤럭시ZFlip6.png" alt="s24" />
+                    <img class="fit-picture" src="img/갤럭시ZFlip6.png" alt="s24" />
                     <div class="model-name">Z Flip 6</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">1485000</span>원</div>
@@ -162,7 +126,7 @@
 
                 
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/점프3.png" alt="" />
+                    <img class="fit-picture" src="img/점프3.png" alt="" />
                     <div class="model-name">갤럭시 점프 3</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">438900</span>원</div>
@@ -170,21 +134,13 @@
                     </div>
                 </div>
 
+                   
                 <div class="itembox">
-                    <img class="fit-picture" src="/static/img/레드미노트14.jpg" alt="" />
-                    <div class="model-name">샤오미 레드미 노트 14 프로</div>
-                    <div class="price-box">
-                        <div><span class="label">출고가:</span> <span class="price bold f1">399300</span>원</div>
-                        <div><span class="label">원샷 지원금:</span> <span class="price bold blue f1">420000</span>원 (~2.24 기간한정)</div>
-                    </div>
-                </div>
-
-                <div class="itembox">
-                    <img class="fit-picture" src="/static/img/포차코.jpg" alt="" />
+                    <img class="fit-picture" src="img/포차코.jpg" alt="" />
                     <div class="model-name">포차코 키즈폰</div>
                     <div class="price-box">
                         <div><span class="label">출고가:</span> <span class="price bold f1">349800</span>원</div>
-                        <div><span class="label">원샷 지원금:</span> <span class="price bold blue f1">450000</span>원 (~2.24 기간한정)</div>
+                        <div><span class="label">원샷 지원금:</span> <span class="price bold blue f1">170000</span>원</div>
                     </div>
                 </div>
             </div>
@@ -201,44 +157,25 @@
 
             <div class="category">
                 <div class="u_itembox">
-                    <div class="model-name">모바일/USIM+인터넷(에센스)+TV(스페셜)</div>
-                    <div class="price-box">
+                    <div class="model-name">모바일+인터넷+TV</div>
+                     <div class="price-box">
                         <div><span class="label">• 유선요금:</span> <span class="price bold f1">63250</span>원 (월)</div>
-                        <div><span class="label">• 원샷 지원금:</span> <span class="price bold blue f2">800000</span>원 (상품권 10만원 포함)</div>
-                        <div><span class="label">• 요금제 기준:</span> <span class="price bold">인터넷 에센스팩S + TV 초이스 스페셜</span></div>
-                        <div><span class="label" style="color:#7f0c0c">* 모바일 지원금 별도 추가</span></div>
+                        <div><span class="label">• 상품권:</span> <span class="price bold f2">100000</span>원</div>
+                        <div><span class="label">• 원샷 지원금:</span> <span class="price bold blue f2">700000</span>원</div>
+                        <div><span class="label">• 요금제기준:</span> <span class="price bold">인터넷 에센스팩S + 지니TV 초이스 스페셜</span></div>
                     </div>
                 </div>
 
                 <div class="u_itembox">
-                    <div class="model-name">모바일/USIM+인터넷(베이직)+TV(에센스)</div>
-                    <div class="price-box">
-                        <div><span class="label">• 유선요금:</span> <span class="price bold f1">53450</span>원 (월)</div>
-                        <div><span class="label">• 원샷 지원금:</span> <span class="price bold blue f2">700000</span>원 (상품권 7만원 포함)</div>
-                        <div><span class="label">• 요금제 기준:</span> <span class="price bold">인터넷 베이직팩S + TV 초이스 에센스</span></div>
-                        <div><span class="label" style="color:#7f0c0c">* 모바일 지원금 별도 추가</span></div>
-                    </div>
-                </div>
-
-                <div class="u_itembox">
-                    <div class="model-name">인터넷(에센스)+TV(스페셜)</div>
-                    <div class="price-box">
+                    <div class="model-name">인터넷+TV</div>
+                     <div class="price-box">
                         <div><span class="label">• 유선요금:</span> <span class="price bold f1">63250</span>원 (월)</div>
-                        <div><span class="label">• 원샷 지원금:</span> <span class="price bold blue f2">500000</span>원 (상품권 10만원 포함)</div>
-                        <div><span class="label">• 요금제기준:</span> <span class="price bold">인터넷 에센스팩S + TV 초이스 스페셜</span></div>
-                        <div><span class="label" style="color:#7f0c0c">* 모바일 지원금 별도 추가</span></div>
+                        <div><span class="label">• 상품권:</span> <span class="price bold f2">100000</span>원</div>
+                        <div><span class="label">• 원샷 지원금:</span> <span class="price bold blue f2">500000</span>원</div>
+                        <div><span class="label">• 요금제기준:</span> <span class="price bold">인터넷 에센스팩S + 지니TV 초이스 스페셜</span></div>
                     </div>
                 </div>
 
-                
-                <div class="u_itembox">
-                    <div class="model-name">인터넷(베이직)+TV(에센스)</div>
-                    <div class="price-box">
-                        <div><span class="label">• 유선요금:</span> <span class="price bold f1">54450</span>원 (월)</div>
-                        <div><span class="label">• 원샷 지원금:</span> <span class="price bold blue f2">400000</span>원 (상품권 7만원 포함)</div>
-                        <div><span class="label">• 요금제기준:</span> <span class="price bold">인터넷 베이직팩S + TV 초이스 에센스</span></div>
-                    </div>
-                </div>
 
             </div>
         </div>
@@ -249,12 +186,12 @@
                 <div class="u_itembox">
                     <div class="model-name">하이오더</div>
                     <div class="so_itembox">
-                        <img class="so_fit-picture" src="/static/img/하이오더.png" alt="하이오더" />
+                        <img class="so_fit-picture" src="img/하이오더.png" alt="하이오더" />
                         <div class="so_price price-box">
-                            <div><span class="label">• 요금:</span> <span class="price bold f1">22000</span>원 (월)/대</div>
-                            <div><span class="label">• 원샷 지원금:</span> <span class="price bold f2">100000</span>원/대</div>
-                            <div><span class="label">• 요금제기준:</span> <span class="price bold">후불형 기준</span></div>
-                            {% comment %} <div><span class="label">• 테이블 당 10만원 지원</span></div> {% endcomment %}
+                            <div><span class="label">• 요금:</span> <span class="price bold f1">244200</span>원 (월)</div>
+                            <div><span class="label">• 원샷 지원금:</span> <span class="price bold f2">500000</span>원</div>
+                            <div><span class="label">• 요금제기준:</span> <span class="price bold">후불형 기준/ 5대</span></div>
+                            <div><span class="label">• 테이블 당 10만원 지원</span></div>
                         </div>
                     </div>
                 </div>
@@ -263,7 +200,7 @@
                 <div class="u_itembox">
                     <div class="model-name">AI로봇</div>
                     <div class="so_itembox">
-                        <img class="so_fit-picture" src="/static/img/로봇.jpg" alt="로봇" />
+                        <img class="so_fit-picture" src="img/로봇.jpg" alt="로봇" />
                         <div class="so_price price-box">
                             <div><span class="label">• 요금:</span> <span class="price bold f1">660000</span>원 (월)</div>
                             <div><span class="label">• 원샷 지원금:</span> <span class="price bold f2">2000000</span>원</div>
@@ -275,9 +212,9 @@
 
 
                 <div class="u_itembox">
-                    <div class="model-name">AI전화(Lite)</div>
+                    <div class="model-name">AI전화</div>
                     <div class="so_itembox">
-                        <img class="so_fit-picture" src="/static/img/AI전화.png" alt="AI전화" />
+                        <img class="so_fit-picture" src="img/AI전화.png" alt="AI전화" />
                         <div class="so_price price-box">
                             <div><span class="label">• 요금:</span> <span class="price bold f1">9900</span>원 (월)</div>
                             <div><span class="label">• 원샷 지원금:</span> <span class="price bold f2">30000</span>원</div>
@@ -311,7 +248,7 @@
 
                 <div class="category">
                     <div class="itembox">
-                        <img class="fit-picture" src="/static/img/서대구아스텔.png" alt="" />
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
                         <div class="model-name">서대구 / 아스텔</div>
                         <div class="price-box">
                             <div><span class="label">윤영준 과장 (010-7300-7076)</span></div>
@@ -320,7 +257,7 @@
                     </div>
 
                     <div class="itembox">
-                        <img class="fit-picture" src="/static/img/서대구아스텔.png" alt="" />
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
                         <div class="model-name">동대구 / 인하우스</div>
                         <div class="price-box">
                             <div><span class="label">성영욱 과장 (010-9777-7792)</span></div>
@@ -328,7 +265,7 @@
                     </div>
 
                     <div class="itembox">
-                        <img class="fit-picture" src="/static/img/서대구아스텔.png" alt="" />
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
                         <div class="model-name">경북동부 / 한길</div>
                         <div class="price-box">
                             <div><span class="label">김선희 차장 (010-9777-7743)</span></div>
@@ -336,7 +273,7 @@
                     </div>
 
                      <div class="itembox">
-                        <img class="fit-picture" src="/static/img/서대구아스텔.png" alt="" />
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
                         <div class="model-name">경북서부 / KTCS</div>
                         <div class="price-box">
                             <div><span class="label">정기웅 차장 (010-9777-7842)</span></div>
@@ -344,7 +281,7 @@
                     </div>
 
                     <div class="itembox">
-                        <img class="fit-picture" src="/static/img/서대구아스텔.png" alt="" />
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
                         <div class="model-name">경북북부 / 대동기업</div>
                         <div class="price-box">
                             <div><span class="label">류지환 차장 (010-9888-3187)</span></div>
@@ -359,7 +296,7 @@
 
                 <div class="category">
                     <div class="itembox">
-                        <img class="fit-picture" src="/static/img/서대구아스텔.png" alt="" />
+                        <img class="fit-picture" src="img/서대구아스텔.png" alt="" />
                         <div class="model-name">전 권역 / 플라자</div>
                         <div class="price-box">
                             <div><span class="label">윤대열 그룹장 (010-7727-1818)</span></div>
@@ -375,7 +312,7 @@
             <div id="tab1" class="ptab-content" style="display:block;">
 
                 <div class="bigo">
-                <span class="label font-resize">※ 링크 클릭 시 P&S 전용 상담톡으로 이동</span>
+                <span class="label font-resize">※ QR코드 스캔 또는 링크 클릭 시 전용 상담톡으로 이동</span>
                 <span class="label font-resize">※ 대리점에서 상담 후 네이버폼 접수 링크를 고객님께 전달 (임직원 정보 입력 必)</span>
                 </div>
 
@@ -386,58 +323,58 @@
 
                 <div class="category">
                     <div class="u_itembox">
-                        <div class="model-name">서대구 / 아스텔 (링크: <a href="https://pf.kakao.com/_NXYzG" target="_blank"><span class="blue price bold">바로가기</span></a>)</div>
+                        <div class="model-name">서대구 / 아스텔</div>
                         <div class="so_itembox">
-                            {% comment %} <img class="so_fit-picture" src="/static/img/서대구아스텔.png" alt="" /> {% endcomment %}
+                            <img class="so_fit-picture" src="img/서대구아스텔.png" alt="" />
                             <div class="so_price price-box">
-                                <div><span class="label">(담당자) 류수정 (010-9555-6038)</div>
-                                <div><span class="label">(KT) 윤영준 과장 (010-7300-7076)</span></div>
-                                <div><span class="label">(KT) 서준영 과장 (010-9888-8893)</span></div>
+                                <div><span class="label">링크: </span><a href="https://pf.kakao.com/_NXYzG" target="_blank"><span class="blue price bold">바로가기</span></a></div>
+                                <div><span class="label">윤영준 과장 (010-7300-7076)</span></div>
+                                <div><span class="label">서준영 과장 (010-9888-8893)</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="u_itembox">
-                        <div class="model-name">동대구 / 인하우스 (링크: <a href="https://pf.kakao.com/_AaYRG" target="_blank"><span class="blue price bold">바로가기</span></a>)</div>
+                        <div class="model-name">동대구 / 인하우스</div>
                         <div class="so_itembox">
-                        
+                            <img class="so_fit-picture" src="img/동대구인하우스.png" alt="" />
                             <div class="so_price price-box">
-                                <div><span class="label">(담당자) 이초롱 (010-7237-7137)</span></div>
-                                <div><span class="label">(KT) 성영욱 과장 (010-9777-7792)</span></div>
+                                <div><span class="label">링크: </span><a href="https://pf.kakao.com/_AaYRG" target="_blank"><span class="blue price bold">바로가기</span></a></div>
+                                <div><span class="label">성영욱 과장 (010-9777-7792)</span></div>
                             </div>
                         </div>
                     </div>
 
 
                     <div class="u_itembox">
-                        <div class="model-name">경북동부 / 한길 (링크: <a href="https://pf.kakao.com/_eExnzxj" target="_blank"><span class="blue price bold">바로가기</span></a>)</div>
+                        <div class="model-name">경북동부 / 한길</div>
                         <div class="so_itembox">
-                            
+                            <img class="so_fit-picture" src="img/경북동부한길.png" alt="" />
                             <div class="so_price price-box">
-                                <div><span class="label">(담당자) 김나윤 (010-2997-1444)</span></div>
-                                <div><span class="label">(KT) 김선희 차장 (010-9777-7743)</span></div>
+                                <div><span class="label">링크: </span><a href="https://pf.kakao.com/_eExnzxj" target="_blank"><span class="blue price bold">바로가기</span></a></div>
+                                <div><span class="label">김선희 차장 (010-9777-7743)</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="u_itembox">
-                        <div class="model-name">경북서부 / KTCS (링크: <a href="https://open.kakao.com/o/ss5HNkyg" target="_blank"><span class="blue price bold">바로가기</span></a>)</div>
+                        <div class="model-name">경북서부 / KTCS</div>
                         <div class="so_itembox">
-                            
+                            <img class="so_fit-picture" src="img/경북서부KTCS.png" alt="" />
                             <div class="so_price price-box">
-                                <div><span class="label">(담당자) 장영진 (010-8608-2111)</span></div>
-                                <div><span class="label">(KT) 정기웅 차장 (010-9777-7842)</span></div>
+                                <div><span class="label">링크: </span><a href="https://open.kakao.com/o/ss5HNkyg" target="_blank"><span class="blue price bold">바로가기</span></a></div>
+                                <div><span class="label">정기웅 차장 (010-9777-7842)</span></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="u_itembox">
-                        <div class="model-name">경북북부 / 대동기업 (링크: <a href="https://pf.kakao.com/_WlBIG" target="_blank"><span class="blue price bold">바로가기</span></a>)</div>
+                        <div class="model-name">경북북부 / 대동기업</div>
                         <div class="so_itembox">
-                            
+                            <img class="so_fit-picture" src="img/경북북부대동기업.png" alt="" />
                             <div class="so_price price-box">
-                                <div><span class="label">(담당자) 오희연 (010-2595-2102)</span></div>
-                                <div><span class="label">(KT) 류지환 차장 (010-9888-3187)</span></div>
+                                <div><span class="label">링크: </span><a href="https://pf.kakao.com/_WlBIG" target="_blank"><span class="blue price bold">바로가기</span></a></div>
+                                <div><span class="label">류지환 차장 (010-9888-3187)</span></div>
                             </div>
                         </div>
                     </div>
@@ -450,11 +387,12 @@
                 </div>
 
                 <div class="category">
-                    <div class="u_itembox">
-                        <div class="model-name">전 권역 / 플라자 (링크: </span><a href="https://pf.kakao.com/_xbvysn" target="_blank"><span class="blue price bold">바로가기</span></a>)</div>
+                     <div class="u_itembox">
+                        <div class="model-name">전 권역 / 플라자</div>
                         <div class="so_itembox">
-                            
+                            <img class="so_fit-picture" src="img/플라자.png" alt="" />
                             <div class="so_price price-box">
+                                <div><span class="label">링크: </span><a href="https://pf.kakao.com/_xbvysn" target="_blank"><span class="blue price bold">바로가기</span></a></div>
                                 <div><span class="label">윤대열 그룹장 (010-7727-1818)</span></div>
                             </div>
                         </div>
@@ -471,6 +409,8 @@
     </main>
 
 
+
+
     <div id="popup" class="popup hidden">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
@@ -482,16 +422,6 @@
             <p><strong>※ 요금제 & 부가서비스 사용 조건 있음</strong></p>
         </div>
     </div>
-    
-
-
-
-
-{% comment %} 
-
-    <script src="/static/script.js"></script>
-
-
+    <script src="static/script.js"></script>
 </body>
-
-</html>
+</HTML>
